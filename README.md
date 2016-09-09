@@ -1,9 +1,9 @@
-# Melodeon
+# Melodeon #
 - Currently uses prototype for its class structure and jQuery.
 
 
 
-### Usage
+### Usage ###
 ```
 $('.js-melodeon').each(function(){
   new Iweb.MelodeonMenu($(this));
@@ -12,7 +12,7 @@ $('.js-melodeon').each(function(){
 - An instance of the menu is placed on the data attribute *melodeon* of the element.
 
 
-### Options
+### Options ###
 **identifier** *default: melodeon* Used as the event namespace identifier and the element's data attribute name
 **hasChildrenClass** *default: 'has-child'* The class to give to *navItemSelector*s with children
 **hasActiveChildrenClass** *default: 'has-active-child'* The class to give to a parent *navItemSelector* with active children
@@ -25,13 +25,13 @@ $('.js-melodeon').each(function(){
 **triggerSelector**: *default: 'a'* Selector used to trigger opening / closing of the menu items
 **slideSpeed** *default: 350* Animation speed of the menu's slide effect in milliseconds
 
-### Methods
+### Methods ###
 **start** Initializes the menu. This is called automatically when the menu instance is instantiated
 **stop** Removes the menu's events and classes
 **activateNav($item)**  opens a menu item. An instance of a *triggerSelector* item should be passed in
 
 
-### Callbacks
+### Callbacks ###
 
 *activate*
 ```
