@@ -5,11 +5,13 @@
 We initialize this way to emulate the way a jQuery Widget would create an instance of itself for each element in the selector. Access the menu object once instantiated using ```$('.element').data('melodeon')```.
 
 ```js
+// Options is an optional parameter, see the defaults below
 $('.js-melodeon').each(function(){
-  new Llapgoch.MelodeonMenu($(this));
+  new Llapgoch.MelodeonMenu($(this), {
+    // Override options - optional - see below for all options
+  });
 });
 ```
-- An instance of the menu is placed on the data attribute *melodeon* of the element.
 
 
 ### Options
