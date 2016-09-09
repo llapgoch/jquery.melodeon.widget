@@ -21,8 +21,8 @@ $('.js-melodeon').each(function(){
 * `activeClass` **default: 'is-active'** The class to assign to an active *navItemSelector*
 * `openDefault` **default: true** Whether to open an item within the structure with the selector *openDefaultSelector*
 * `openDefaultSelector` **default: '.js-melodeon-default'** Selector used to define an element to be the opened by default when the menu starts.
-* `navContainerSelector` **default: '.js-melodeon-list'** Selector used to denote a container of *navItemSelector*s. Typically will be a **<ul>**
-* `navItemSelector` **default: '.js-melodeon-item'** Selector used to denote a menu item. Typically will be an **<li>**
+* `navContainerSelector` **default: '.js-melodeon-list'** Selector used to denote a container of navItemSelectors. Typically will be a **ul**
+* `navItemSelector` **default: '.js-melodeon-item'** Selector used to denote a menu item. Typically will be an **li**
 * `triggerSelector` **default: 'a'** Selector used to trigger opening / closing of the menu items
 * `slideSpeed` **default: 350** Animation speed of the menu's slide effect in milliseconds
 
