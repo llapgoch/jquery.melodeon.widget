@@ -39,7 +39,7 @@ $('.js-melodeon').each(function(){
 **activate**
 ```js
 $('.js-melodeon').on('activate', function(ev, data){
-  // Code to run when an menu item is activated
-  
+  // Code to run when an menu item is activated, use data. 
+  // use data.item to access the clicked element
 });
 ```
