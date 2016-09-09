@@ -1,8 +1,8 @@
 # Melodeon #
-
-- Currently uses prototype for its class structure and jQuery.
+- A jQuery / Prototype menu. Made originally for Magento, it uses Prototype for its class structure and jQuery for everything else. Will be updated at some point to become a jQuery Widget.
 
 ### Usage ###
+We initialize this way to emulate the way a jQuery Widget would create an instance of itself for each element in the selector. Access the menu object once instantiated using ```$('.element').data('melodeon')```.
 
 ```js
 $('.js-melodeon').each(function(){
