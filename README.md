@@ -1,4 +1,4 @@
-# Melodeon #
+# Melodeon Menu #
 - A jQuery / Prototype menu. Made originally for Magento, it uses Prototype for its class structure and jQuery for everything else. Will be updated at some point to become a jQuery Widget.
 
 ### Usage ###
