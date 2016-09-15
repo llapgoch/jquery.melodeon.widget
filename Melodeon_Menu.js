@@ -32,7 +32,6 @@
             this.settings = $.extend({}, this.defaults, params);
 
             $el.data(this.settings.identifier, this);
-            this.$element = $el;
 
             this.setupChildren();
             this.start();

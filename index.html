@@ -2,17 +2,19 @@
 <head>
     <link rel="stylesheet" href="styles.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.0/jquery-ui.min.js"></script>
+
     <script>
         jQuery.noConflict();
     </script>
-    <script src="https://ajax.googleapis.com/ajax/libs/prototype/1.7.3.0/prototype.js"></script>
-    <script src="menu.js"></script>
+
+    <script src="melodeon.widget.js"></script>
 
     <script>
+
+
         jQuery(document).on('ready', function(){
-            jQuery('.js-menu').each(function(){
-                var sMenu = new Iweb.Slidemenu(jQuery(this));
-            });
+            jQuery('.js-menu').melodeonMenu();
         });
     </script>
 </head>
@@ -22,240 +24,240 @@
     <p>A menu inspired by the John Lewis mobile website. Uses a basic nested unordered list and allows you to drill down to sections. It hides other sibling options making it easier to interpret the menu. Add <code>.js-menu</code> to the <code>ul</code> to get
         started. Add <code>.js-menu-default</code> to specify what to open on launch. It must be an unordered list for now. It will infinitely nest as you please.</p>
 
-    <ul class="js-menu nav">
-        <li class="nav__item">
-            <a href="#" class="js-menu-default">All departments</a>
-            <ul class="nav">
-                <li class="nav__item">
+    <ul class="js-menu js-melodeon-list">
+        <li class="js-melodeon-item">
+            <a href="#" class="js-melodeon-default">All departments</a>
+            <ul class="js-melodeon-list">
+                <li class="js-melodeon-item">
                     <a href="#">Create</a>
-                    <ul class="nav">
-                        <li class="nav__item"><a href="#">Hot Products</a>
-                            <ul class="nav">
-                                <li class="nav__item"><a href="#">Weddings</a></li>
-                                <li class="nav__item"><a href="#">Fathers Day</a></li>
-                                <li class="nav__item"><a href="#">Mugs</a></li>
-                                <li class="nav__item"><a href="#">T-Shirts</a></li>
-                                <li class="nav__item"><a href="#">Stags &amp; Hens</a></li>
-                                <li class="nav__item"><a href="#">Labels</a></li>
-                                <li class="nav__item"><a href="#">Office Mugs</a></li>
-                                <li class="nav__item"><a href="#">View all</a></li>
+                    <ul class="js-melodeon-list">
+                        <li class="js-melodeon-item"><a href="#">Hot Products</a>
+                            <ul class="js-melodeon-list">
+                                <li class="js-melodeon-item"><a href="#">Weddings</a></li>
+                                <li class="js-melodeon-item"><a href="#">Fathers Day</a></li>
+                                <li class="js-melodeon-item"><a href="#">Mugs</a></li>
+                                <li class="js-melodeon-item"><a href="#">T-Shirts</a></li>
+                                <li class="js-melodeon-item"><a href="#">Stags &amp; Hens</a></li>
+                                <li class="js-melodeon-item"><a href="#">Labels</a></li>
+                                <li class="js-melodeon-item"><a href="#">Office Mugs</a></li>
+                                <li class="js-melodeon-item"><a href="#">View all</a></li>
                             </ul>
                         </li>
-                        <li class="nav__item"><a href="#">Women</a>
-                            <ul class="nav">
-                                <li class="nav__item"><a href="#">Men</a></li>
-                                <li class="nav__item"><a href="#">Women</a></li>
-                                <li class="nav__item"><a href="#">Kids</a></li>
-                                <li class="nav__item"><a href="#">Babies</a></li>
-                                <li class="nav__item"><a href="#">Engraved</a></li>
-                                <li class="nav__item"><a href="#">Home &amp; Kitchen</a></li>
-                                <li class="nav__item"><a href="#">Art &amp; Posters</a></li>
-                                <li class="nav__item"><a href="#">Stationery</a></li>
-                                <li class="nav__item"><a href="#">Bags</a></li>
-                                <li class="nav__item"><a href="#">Accessories</a></li>
-                                <li class="nav__item"><a href="#">Toys</a></li>
-                                <li class="nav__item"><a href="#">Workwear</a></li>
-                                <li class="nav__item"><a href="#">View all</a></li>
+                        <li class="js-melodeon-item"><a href="#">Women</a>
+                            <ul class="js-melodeon-list">
+                                <li class="js-melodeon-item"><a href="#">Men</a></li>
+                                <li class="js-melodeon-item"><a href="#">Women</a></li>
+                                <li class="js-melodeon-item"><a href="#">Kids</a></li>
+                                <li class="js-melodeon-item"><a href="#">Babies</a></li>
+                                <li class="js-melodeon-item"><a href="#">Engraved</a></li>
+                                <li class="js-melodeon-item"><a href="#">Home &amp; Kitchen</a></li>
+                                <li class="js-melodeon-item"><a href="#">Art &amp; Posters</a></li>
+                                <li class="js-melodeon-item"><a href="#">Stationery</a></li>
+                                <li class="js-melodeon-item"><a href="#">Bags</a></li>
+                                <li class="js-melodeon-item"><a href="#">Accessories</a></li>
+                                <li class="js-melodeon-item"><a href="#">Toys</a></li>
+                                <li class="js-melodeon-item"><a href="#">Workwear</a></li>
+                                <li class="js-melodeon-item"><a href="#">View all</a></li>
                             </ul>
                         </li>
-                        <li class="nav__item"><a href="#">Men</a>
-                            <ul class="nav">
-                                <li class="nav__item"><a href="#">Gifts for Her</a></li>
-                                <li class="nav__item"><a href="#">Gifts for Him</a></li>
-                                <li class="nav__item"><a href="#">Gifts for Kids</a></li>
-                                <li class="nav__item"><a href="#">Gifts for Babies</a></li>
-                                <li class="nav__item"><a href="#">Gifts for Teens</a></li>
-                                <li class="nav__item"><a href="#">Gifts for Grandparents</a></li>
-                                <li class="nav__item"><a href="#">Gifts for Couples</a></li>
-                                <li class="nav__item"><a href="#">Gifts for Teachers</a></li>
-                                <li class="nav__item"><a href="#">Gifts for Pets</a></li>
-                                <li class="nav__item"><a href="#">View all</a></li>
+                        <li class="js-melodeon-item"><a href="#">Men</a>
+                            <ul class="js-melodeon-list">
+                                <li class="js-melodeon-item"><a href="#">Gifts for Her</a></li>
+                                <li class="js-melodeon-item"><a href="#">Gifts for Him</a></li>
+                                <li class="js-melodeon-item"><a href="#">Gifts for Kids</a></li>
+                                <li class="js-melodeon-item"><a href="#">Gifts for Babies</a></li>
+                                <li class="js-melodeon-item"><a href="#">Gifts for Teens</a></li>
+                                <li class="js-melodeon-item"><a href="#">Gifts for Grandparents</a></li>
+                                <li class="js-melodeon-item"><a href="#">Gifts for Couples</a></li>
+                                <li class="js-melodeon-item"><a href="#">Gifts for Teachers</a></li>
+                                <li class="js-melodeon-item"><a href="#">Gifts for Pets</a></li>
+                                <li class="js-melodeon-item"><a href="#">View all</a></li>
                             </ul>
                         </li>
-                        <li class="nav__item"><a href="#">Kids</a>
-                            <ul class="nav">
-                                <li class="nav__item"><a href="#">Anniversary Gifts</a></li>
-                                <li class="nav__item"><a href="#">Birthday Gifts</a></li>
-                                <li class="nav__item"><a href="#">Christening Gifts</a></li>
-                                <li class="nav__item"><a href="#">Engagement Gifts</a></li>
-                                <li class="nav__item"><a href="#">Father's Day Gifts</a></li>
-                                <li class="nav__item"><a href="#">New Baby Gifts</a></li>
-                                <li class="nav__item"><a href="#">Retirement Gifts</a></li>
-                                <li class="nav__item"><a href="#">Wedding Gifts</a></li>
-                                <li class="nav__item"><a href="#">Back to School Gifts</a></li>
-                                <li class="nav__item"><a href="#">Baby Shower Gifts</a></li>
-                                <li class="nav__item"><a href="#">Christmas Gifts</a></li>
-                                <li class="nav__item"><a href="#">Easter Gifts</a></li>
-                                <li class="nav__item"><a href="#">Exam Success Gifts</a></li>
-                                <li class="nav__item"><a href="#">View all</a></li>
+                        <li class="js-melodeon-item"><a href="#">Kids</a>
+                            <ul class="js-melodeon-list">
+                                <li class="js-melodeon-item"><a href="#">Anniversary Gifts</a></li>
+                                <li class="js-melodeon-item"><a href="#">Birthday Gifts</a></li>
+                                <li class="js-melodeon-item"><a href="#">Christening Gifts</a></li>
+                                <li class="js-melodeon-item"><a href="#">Engagement Gifts</a></li>
+                                <li class="js-melodeon-item"><a href="#">Father's Day Gifts</a></li>
+                                <li class="js-melodeon-item"><a href="#">New Baby Gifts</a></li>
+                                <li class="js-melodeon-item"><a href="#">Retirement Gifts</a></li>
+                                <li class="js-melodeon-item"><a href="#">Wedding Gifts</a></li>
+                                <li class="js-melodeon-item"><a href="#">Back to School Gifts</a></li>
+                                <li class="js-melodeon-item"><a href="#">Baby Shower Gifts</a></li>
+                                <li class="js-melodeon-item"><a href="#">Christmas Gifts</a></li>
+                                <li class="js-melodeon-item"><a href="#">Easter Gifts</a></li>
+                                <li class="js-melodeon-item"><a href="#">Exam Success Gifts</a></li>
+                                <li class="js-melodeon-item"><a href="#">View all</a></li>
                             </ul>
                         </li>
-                        <li class="nav__item"><a href="#">Babies</a></li>
-                        <li class="nav__item"><a href="#">Engraved</a>
-                            <ul class="nav">
-                                <li class="nav__item"><a href="#">Plumbers</a></li>
-                                <li class="nav__item"><a href="#">Builders</a></li>
-                                <li class="nav__item"><a href="#">Carpenters</a></li>
-                                <li class="nav__item"><a href="#">Electricians</a>
-                                    <ul class="nav">
-                                        <li class="nav__item"><a href="#">Bags</a>
-                                            <ul class="nav">
-                                                <li class="nav__item"><a href="#">Stag Do</a></li>
-                                                <li class="nav__item"><a href="#">Hen Do</a></li>
-                                                <li class="nav__item"><a href="#">Festival &amp; Music</a></li>
-                                                <li class="nav__item"><a href="#">Birthday Parties</a></li>
-                                                <li class="nav__item"><a href="#">Childrens Parties</a></li>
-                                                <li class="nav__item"><a href="#">Holiday &amp; Beach</a></li>
-                                                <li class="nav__item"><a href="#">View all</a></li>
+                        <li class="js-melodeon-item"><a href="#">Babies</a></li>
+                        <li class="js-melodeon-item"><a href="#">Engraved</a>
+                            <ul class="js-melodeon-list">
+                                <li class="js-melodeon-item"><a href="#">Plumbers</a></li>
+                                <li class="js-melodeon-item"><a href="#">Builders</a></li>
+                                <li class="js-melodeon-item"><a href="#">Carpenters</a></li>
+                                <li class="js-melodeon-item"><a href="#">Electricians</a>
+                                    <ul class="js-melodeon-list">
+                                        <li class="js-melodeon-item"><a href="#">Bags</a>
+                                            <ul class="js-melodeon-list">
+                                                <li class="js-melodeon-item"><a href="#">Stag Do</a></li>
+                                                <li class="js-melodeon-item"><a href="#">Hen Do</a></li>
+                                                <li class="js-melodeon-item"><a href="#">Festival &amp; Music</a></li>
+                                                <li class="js-melodeon-item"><a href="#">Birthday Parties</a></li>
+                                                <li class="js-melodeon-item"><a href="#">Childrens Parties</a></li>
+                                                <li class="js-melodeon-item"><a href="#">Holiday &amp; Beach</a></li>
+                                                <li class="js-melodeon-item"><a href="#">View all</a></li>
                                             </ul>
                                         </li>
-                                        <li class="nav__item"><a href="#">Accessories</a>
-                                            <ul class="nav">
-                                                <li class="nav__item"><a href="#">Stag Do</a></li>
-                                                <li class="nav__item"><a href="#">Hen Do</a></li>
-                                                <li class="nav__item"><a href="#">Festival &amp; Music</a></li>
-                                                <li class="nav__item"><a href="#">Birthday Parties</a></li>
-                                                <li class="nav__item"><a href="#">Childrens Parties</a></li>
-                                                <li class="nav__item"><a href="#">Holiday &amp; Beach</a></li>
-                                                <li class="nav__item"><a href="#">View all</a></li>
+                                        <li class="js-melodeon-item"><a href="#">Accessories</a>
+                                            <ul class="js-melodeon-list">
+                                                <li class="js-melodeon-item"><a href="#">Stag Do</a></li>
+                                                <li class="js-melodeon-item"><a href="#">Hen Do</a></li>
+                                                <li class="js-melodeon-item"><a href="#">Festival &amp; Music</a></li>
+                                                <li class="js-melodeon-item"><a href="#">Birthday Parties</a></li>
+                                                <li class="js-melodeon-item"><a href="#">Childrens Parties</a></li>
+                                                <li class="js-melodeon-item"><a href="#">Holiday &amp; Beach</a></li>
+                                                <li class="js-melodeon-item"><a href="#">View all</a></li>
                                             </ul>
                                         </li>
-                                        <li class="nav__item"><a href="#">Toys</a>
-                                            <ul class="nav">
-                                                <li class="nav__item"><a href="#">Stag Do</a></li>
-                                                <li class="nav__item"><a href="#">Hen Do</a></li>
-                                                <li class="nav__item"><a href="#">Festival &amp; Music</a></li>
-                                                <li class="nav__item"><a href="#">Birthday Parties</a></li>
-                                                <li class="nav__item"><a href="#">Childrens Parties</a></li>
-                                                <li class="nav__item"><a href="#">Holiday &amp; Beach</a></li>
-                                                <li class="nav__item"><a href="#">View all</a></li>
+                                        <li class="js-melodeon-item"><a href="#">Toys</a>
+                                            <ul class="js-melodeon-list">
+                                                <li class="js-melodeon-item"><a href="#">Stag Do</a></li>
+                                                <li class="js-melodeon-item"><a href="#">Hen Do</a></li>
+                                                <li class="js-melodeon-item"><a href="#">Festival &amp; Music</a></li>
+                                                <li class="js-melodeon-item"><a href="#">Birthday Parties</a></li>
+                                                <li class="js-melodeon-item"><a href="#">Childrens Parties</a></li>
+                                                <li class="js-melodeon-item"><a href="#">Holiday &amp; Beach</a></li>
+                                                <li class="js-melodeon-item"><a href="#">View all</a></li>
                                             </ul>
                                         </li>
-                                        <li class="nav__item"><a href="#">Workwear</a></li>
+                                        <li class="js-melodeon-item"><a href="#">Workwear</a></li>
                                     </ul>
                                 </li>
-                                <li class="nav__item"><a href="#">Offices</a></li>
-                                <li class="nav__item"><a href="#">Retail</a></li>
-                                <li class="nav__item"><a href="#">View all</a></li>
+                                <li class="js-melodeon-item"><a href="#">Offices</a></li>
+                                <li class="js-melodeon-item"><a href="#">Retail</a></li>
+                                <li class="js-melodeon-item"><a href="#">View all</a></li>
                             </ul>
                         </li>
-                        <li class="nav__item"><a href="#">Home &amp; Kitchen</a></li>
-                        <li class="nav__item"><a href="#">Engraved</a>
-                            <ul class="nav">
-                                <li class="nav__item"><a href="#">Stag Do</a></li>
-                                <li class="nav__item"><a href="#">Hen Do</a></li>
-                                <li class="nav__item"><a href="#">Festival &amp; Music</a></li>
-                                <li class="nav__item"><a href="#">Birthday Parties</a></li>
-                                <li class="nav__item"><a href="#">Childrens Parties</a></li>
-                                <li class="nav__item"><a href="#">Holiday &amp; Beach</a></li>
-                                <li class="nav__item"><a href="#">View all</a></li>
+                        <li class="js-melodeon-item"><a href="#">Home &amp; Kitchen</a></li>
+                        <li class="js-melodeon-item"><a href="#">Engraved</a>
+                            <ul class="js-melodeon-list">
+                                <li class="js-melodeon-item"><a href="#">Stag Do</a></li>
+                                <li class="js-melodeon-item"><a href="#">Hen Do</a></li>
+                                <li class="js-melodeon-item"><a href="#">Festival &amp; Music</a></li>
+                                <li class="js-melodeon-item"><a href="#">Birthday Parties</a></li>
+                                <li class="js-melodeon-item"><a href="#">Childrens Parties</a></li>
+                                <li class="js-melodeon-item"><a href="#">Holiday &amp; Beach</a></li>
+                                <li class="js-melodeon-item"><a href="#">View all</a></li>
                             </ul>
                         </li>
-                        <li class="nav__item"><a href="#">Art &amp; Posters</a>
-                            <ul class="nav">
-                                <li class="nav__item"><a href="#">Stag Do</a></li>
-                                <li class="nav__item"><a href="#">Hen Do</a></li>
-                                <li class="nav__item"><a href="#">Festival &amp; Music</a></li>
-                                <li class="nav__item"><a href="#">Birthday Parties</a></li>
-                                <li class="nav__item"><a href="#">Childrens Parties</a></li>
-                                <li class="nav__item"><a href="#">Holiday &amp; Beach</a></li>
-                                <li class="nav__item"><a href="#">View all</a></li>
+                        <li class="js-melodeon-item"><a href="#">Art &amp; Posters</a>
+                            <ul class="js-melodeon-list">
+                                <li class="js-melodeon-item"><a href="#">Stag Do</a></li>
+                                <li class="js-melodeon-item"><a href="#">Hen Do</a></li>
+                                <li class="js-melodeon-item"><a href="#">Festival &amp; Music</a></li>
+                                <li class="js-melodeon-item"><a href="#">Birthday Parties</a></li>
+                                <li class="js-melodeon-item"><a href="#">Childrens Parties</a></li>
+                                <li class="js-melodeon-item"><a href="#">Holiday &amp; Beach</a></li>
+                                <li class="js-melodeon-item"><a href="#">View all</a></li>
                             </ul>
                         </li>
-                        <li class="nav__item"><a href="#">Stationery</a>
-                            <ul class="nav">
-                                <li class="nav__item"><a href="#">Stag Do</a></li>
-                                <li class="nav__item"><a href="#">Hen Do</a></li>
-                                <li class="nav__item"><a href="#">Festival &amp; Music</a></li>
-                                <li class="nav__item"><a href="#">Birthday Parties</a></li>
-                                <li class="nav__item"><a href="#">Childrens Parties</a></li>
-                                <li class="nav__item"><a href="#">Holiday &amp; Beach</a></li>
-                                <li class="nav__item"><a href="#">View all</a></li>
+                        <li class="js-melodeon-item"><a href="#">Stationery</a>
+                            <ul class="js-melodeon-list">
+                                <li class="js-melodeon-item"><a href="#">Stag Do</a></li>
+                                <li class="js-melodeon-item"><a href="#">Hen Do</a></li>
+                                <li class="js-melodeon-item"><a href="#">Festival &amp; Music</a></li>
+                                <li class="js-melodeon-item"><a href="#">Birthday Parties</a></li>
+                                <li class="js-melodeon-item"><a href="#">Childrens Parties</a></li>
+                                <li class="js-melodeon-item"><a href="#">Holiday &amp; Beach</a></li>
+                                <li class="js-melodeon-item"><a href="#">View all</a></li>
                             </ul>
                         </li>
                     </ul>
                 </li>
 
-                <li class="nav__item">
+                <li class="js-melodeon-item">
                     <a href="#">Shop</a>
-                    <ul class="nav">
-                        <li class="nav__item"><a href="#">What's Hot</a>
-                            <ul class="nav">
-                                <li class="nav__item"><a href="#">Weddings</a></li>
-                                <li class="nav__item"><a href="#">Fathers Day</a></li>
-                                <li class="nav__item"><a href="#">Mugs</a></li>
-                                <li class="nav__item"><a href="#">T-Shirts</a></li>
-                                <li class="nav__item"><a href="#">Stags &amp; Hens</a></li>
-                                <li class="nav__item"><a href="#">Labels</a></li>
-                                <li class="nav__item"><a href="#">Office Mugs</a></li>
-                                <li class="nav__item"><a href="#">View all</a></li>
+                    <ul class="js-melodeon-list">
+                        <li class="js-melodeon-item"><a href="#">What's Hot</a>
+                            <ul class="js-melodeon-list">
+                                <li class="js-melodeon-item"><a href="#">Weddings</a></li>
+                                <li class="js-melodeon-item"><a href="#">Fathers Day</a></li>
+                                <li class="js-melodeon-item"><a href="#">Mugs</a></li>
+                                <li class="js-melodeon-item"><a href="#">T-Shirts</a></li>
+                                <li class="js-melodeon-item"><a href="#">Stags &amp; Hens</a></li>
+                                <li class="js-melodeon-item"><a href="#">Labels</a></li>
+                                <li class="js-melodeon-item"><a href="#">Office Mugs</a></li>
+                                <li class="js-melodeon-item"><a href="#">View all</a></li>
                             </ul>
                         </li>
-                        <li class="nav__item"><a href="#">Products</a>
-                            <ul class="nav">
-                                <li class="nav__item"><a href="#">Men</a></li>
-                                <li class="nav__item"><a href="#">Women</a></li>
-                                <li class="nav__item"><a href="#">Kids</a></li>
-                                <li class="nav__item"><a href="#">Babies</a></li>
-                                <li class="nav__item"><a href="#">Engraved</a></li>
-                                <li class="nav__item"><a href="#">Home &amp; Kitchen</a></li>
-                                <li class="nav__item"><a href="#">Art &amp; Posters</a></li>
+                        <li class="js-melodeon-item"><a href="#">Products</a>
+                            <ul class="js-melodeon-list">
+                                <li class="js-melodeon-item"><a href="#">Men</a></li>
+                                <li class="js-melodeon-item"><a href="#">Women</a></li>
+                                <li class="js-melodeon-item"><a href="#">Kids</a></li>
+                                <li class="js-melodeon-item"><a href="#">Babies</a></li>
+                                <li class="js-melodeon-item"><a href="#">Engraved</a></li>
+                                <li class="js-melodeon-item"><a href="#">Home &amp; Kitchen</a></li>
+                                <li class="js-melodeon-item"><a href="#">Art &amp; Posters</a></li>
                             </ul>
                         </li>
-                        <li class="nav__item"><a href="#">Recipient</a>
-                            <ul class="nav">
-                                <li class="nav__item"><a href="#">Gifts for Her</a></li>
-                                <li class="nav__item"><a href="#">Gifts for Him</a></li>
-                                <li class="nav__item"><a href="#">Gifts for Kids</a></li>
-                                <li class="nav__item"><a href="#">Gifts for Babies</a></li>
-                                <li class="nav__item"><a href="#">Gifts for Teens</a></li>
-                                <li class="nav__item"><a href="#">Gifts for Grandparents</a></li>
-                                <li class="nav__item"><a href="#">Gifts for Couples</a></li>
+                        <li class="js-melodeon-item"><a href="#">Recipient</a>
+                            <ul class="js-melodeon-list">
+                                <li class="js-melodeon-item"><a href="#">Gifts for Her</a></li>
+                                <li class="js-melodeon-item"><a href="#">Gifts for Him</a></li>
+                                <li class="js-melodeon-item"><a href="#">Gifts for Kids</a></li>
+                                <li class="js-melodeon-item"><a href="#">Gifts for Babies</a></li>
+                                <li class="js-melodeon-item"><a href="#">Gifts for Teens</a></li>
+                                <li class="js-melodeon-item"><a href="#">Gifts for Grandparents</a></li>
+                                <li class="js-melodeon-item"><a href="#">Gifts for Couples</a></li>
                             </ul>
                         </li>
-                        <li class="nav__item"><a href="#">Occasions</a>
-                            <ul class="nav">
-                                <li class="nav__item"><a href="#">Anniversary Gifts</a></li>
-                                <li class="nav__item"><a href="#">Birthday Gifts</a></li>
-                                <li class="nav__item"><a href="#">Christening Gifts</a></li>
-                                <li class="nav__item"><a href="#">Engagement Gifts</a></li>
-                                <li class="nav__item"><a href="#">Father's Day Gifts</a></li>
-                                <li class="nav__item"><a href="#">New Baby Gifts</a></li>
-                                <li class="nav__item"><a href="#">Retirement Gifts</a></li>
+                        <li class="js-melodeon-item"><a href="#">Occasions</a>
+                            <ul class="js-melodeon-list">
+                                <li class="js-melodeon-item"><a href="#">Anniversary Gifts</a></li>
+                                <li class="js-melodeon-item"><a href="#">Birthday Gifts</a></li>
+                                <li class="js-melodeon-item"><a href="#">Christening Gifts</a></li>
+                                <li class="js-melodeon-item"><a href="#">Engagement Gifts</a></li>
+                                <li class="js-melodeon-item"><a href="#">Father's Day Gifts</a></li>
+                                <li class="js-melodeon-item"><a href="#">New Baby Gifts</a></li>
+                                <li class="js-melodeon-item"><a href="#">Retirement Gifts</a></li>
                             </ul>
                         </li>
-                        <li class="nav__item"><a href="#">Events</a>
-                            <ul class="nav">
-                                <li class="nav__item"><a href="#">Stag Do</a></li>
-                                <li class="nav__item"><a href="#">Hen Do</a></li>
-                                <li class="nav__item"><a href="#">Festival &amp; Music</a></li>
-                                <li class="nav__item"><a href="#">Birthday Parties</a></li>
-                                <li class="nav__item"><a href="#">Childrens Parties</a></li>
-                                <li class="nav__item"><a href="#">Holiday &amp; Beach</a></li>
-                                <li class="nav__item"><a href="#">View all</a></li>
+                        <li class="js-melodeon-item"><a href="#">Events</a>
+                            <ul class="js-melodeon-list">
+                                <li class="js-melodeon-item"><a href="#">Stag Do</a></li>
+                                <li class="js-melodeon-item"><a href="#">Hen Do</a></li>
+                                <li class="js-melodeon-item"><a href="#">Festival &amp; Music</a></li>
+                                <li class="js-melodeon-item"><a href="#">Birthday Parties</a></li>
+                                <li class="js-melodeon-item"><a href="#">Childrens Parties</a></li>
+                                <li class="js-melodeon-item"><a href="#">Holiday &amp; Beach</a></li>
+                                <li class="js-melodeon-item"><a href="#">View all</a></li>
                             </ul>
                         </li>
-                        <li class="nav__item"><a href="#">Workwear</a>
-                            <ul class="nav">
-                                <li class="nav__item"><a href="#">Plumbers</a></li>
-                                <li class="nav__item"><a href="#">Builders</a></li>
-                                <li class="nav__item"><a href="#">Carpenters</a></li>
-                                <li class="nav__item"><a href="#">Electricians</a></li>
-                                <li class="nav__item"><a href="#">Offices</a></li>
-                                <li class="nav__item"><a href="#">Retail</a></li>
-                                <li class="nav__item"><a href="#">View all</a></li>
+                        <li class="js-melodeon-item"><a href="#">Workwear</a>
+                            <ul class="js-melodeon-list">
+                                <li class="js-melodeon-item"><a href="#">Plumbers</a></li>
+                                <li class="js-melodeon-item"><a href="#">Builders</a></li>
+                                <li class="js-melodeon-item"><a href="#">Carpenters</a></li>
+                                <li class="js-melodeon-item"><a href="#">Electricians</a></li>
+                                <li class="js-melodeon-item"><a href="#">Offices</a></li>
+                                <li class="js-melodeon-item"><a href="#">Retail</a></li>
+                                <li class="js-melodeon-item"><a href="#">View all</a></li>
                             </ul>
                         </li>
-                        <li class="nav__item"><a href="#">Personality</a>
-                            <ul class="nav">
-                                <li class="nav__item"><a href="#">Dog Lover</a></li>
-                                <li class="nav__item"><a href="#">Cat Lover</a></li>
-                                <li class="nav__item"><a href="#">Chocolate &amp; Food</a></li>
-                                <li class="nav__item"><a href="#">Horses</a></li>
-                                <li class="nav__item"><a href="#">Barking Mad</a></li>
-                                <li class="nav__item"><a href="#">Beauty Queen</a></li>
-                                <li class="nav__item"><a href="#">Chocoholic</a></li>
-                                <li class="nav__item"><a href="#">Frozen Fan</a></li>
+                        <li class="js-melodeon-item"><a href="#">Personality</a>
+                            <ul class="js-melodeon-list">
+                                <li class="js-melodeon-item"><a href="#">Dog Lover</a></li>
+                                <li class="js-melodeon-item"><a href="#">Cat Lover</a></li>
+                                <li class="js-melodeon-item"><a href="#">Chocolate &amp; Food</a></li>
+                                <li class="js-melodeon-item"><a href="#">Horses</a></li>
+                                <li class="js-melodeon-item"><a href="#">Barking Mad</a></li>
+                                <li class="js-melodeon-item"><a href="#">Beauty Queen</a></li>
+                                <li class="js-melodeon-item"><a href="#">Chocoholic</a></li>
+                                <li class="js-melodeon-item"><a href="#">Frozen Fan</a></li>
                             </ul>
                         </li>
                     </ul>
