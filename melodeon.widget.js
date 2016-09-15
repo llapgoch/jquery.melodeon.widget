@@ -39,14 +39,10 @@
 
             var events = {};
 
-            console.log("click " + this._getTriggerSelector());
-
             events["click " + this._getTriggerSelector()] = function(ev){
                 ev.preventDefault();
                 this.activateNav($(event.target));
             };
-
-            console.log(events);
 
             this._on(this.element, events);
         },
@@ -95,7 +91,7 @@
 
         activateNav: function($item){
             var self = this;
-            
+
             if(this._isItemActive($item.closest(this.options.navItemSelector))){
                 return;
             }
