@@ -97,7 +97,7 @@
             }
 
             // Use this to hook into
-            this._trigger('activate', {item: $item});
+            this._trigger('activate', null, {item: $item});
 
             // Remove active class
             this._deactivateAllItems();
