@@ -88,6 +88,19 @@
         _getAllVisibleNavItems: function(){
             return $(this.options.navItemSelector + ':not(.' + this.options.navItemHiddenClass + ')', this.element);
         },
+        
+        _fireEvent: function(eventName, event, data){
+            data = data || {};
+            
+            this._trigger(eventName, event, $.extend({}, data, {
+                element: this.element
+            }));
+            
+            var elementData = $.extend({}, data);
+            elementData[this.options.identifier] = this;
+            
+            this.element.trigger(eventName, elementData);
+        },
 
         activateNav: function($item){
             var self = this;
@@ -97,7 +110,7 @@
             }
 
             // Use this to hook into
-            this._trigger('activate', null, {item: $item});
+            this._fireEvent('activate')
 
             // Remove active class
             this._deactivateAllItems();
