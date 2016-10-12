@@ -81,6 +81,7 @@
        _deactivateAllItems: function(){
             // Remove active class
             $(this.options.navItemSelector, this.element)
+                .stop()
                 .removeClass(this.options.activeClass)
                 .removeClass(this.options.hasActiveChildrenClass);
         },
