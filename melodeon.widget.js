@@ -41,7 +41,7 @@
 
             events["click " + this._getTriggerSelector()] = function(ev){
                 ev.preventDefault();
-                this.activateNav($(event.target));
+                this.activateNav($(ev.target));
             };
 
             this._on(this.element, events);
